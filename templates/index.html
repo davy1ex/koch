@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/index.css") }}">
+
+{% endblock %}
+
+{% block content %}
+<div class="error404">
+    <div class="image">
+        <img src="{{ url_for("static", filename="img/sorry.png") }}" alt="not found">
+    </div>
+
+    <div class="text">
+        Error 404. We are developing.
+    </div>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #39373C;
+    color: lightgrey;
+}
+
+a {
+    text-decoration: none;
+    color: lightgrey;
+}
+
+header {
+    border-bottom: 1px solid lightgray;
+}
+
+header, header .wrapper {
+    height: 50px;
+}
+
+header .wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav ul {
+    width: auto;
+    list-style: none;
+    /* display: inline; */
+}
+
+nav .right {
+    float: right;
+    text-align: right;
+}
+
+nav .left {
+    float: left;
+    text-align: left;
+}
+
+nav ul li {
+    width: 100px;
+    line-height: 50px;
+}
+
+ul li {
+    display: inline;
+    padding: 10px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
