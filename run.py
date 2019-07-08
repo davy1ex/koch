@@ -25,11 +25,12 @@ def login():
     return render_template("login.html", form=form)
 
 
-@app.route("/b")
-def basketball():
-    playgrounds = Playground.query.filter_by(playground_type="b").all()
+@app.route("/b_<page>")
+def basketball(page):
+    page = int(page)    
+    playgrounds = Playground.query.filter_by(playground_type="b").all()[page*9:page*9+9]
     
-    return render_template("basketball.html", playgrounds=playgrounds)
+    return render_template("basketball.html", playgrounds=playgrounds, page=int(page))
 
 
 if __name__ == "__main__":

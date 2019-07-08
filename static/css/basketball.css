@@ -1,6 +1,6 @@
 .cell_playgrounds {
     display: flex;
-    margin-top: 20px;
+    margin: 20px 0;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
