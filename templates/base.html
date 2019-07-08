@@ -11,12 +11,12 @@
         <div class="wrapper">
             <nav>
                 <ul class="left">
-                    <li href="/"><a>Home</a></li>
+                    <li><a href="/">Home</a></li>
                 </ul>
                 
                 <ul class="right">
                     {% if current_user.login == "root" %}
-                        <li><a href="/">Admin panel</a></li>
+                        <li><a href="/admin">Admin panel</a></li>
                     {% endif %}
                     <li><a href="/b">Basketball</a></li>
                     <li><a href="/b">Workout</a></li>

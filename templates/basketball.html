@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for("static", filename="css/basketball.css") }}">
+{% endblock %}
+
+{% block content %}
+<div class="cell_playgrounds">
+    {% for playground in playgrounds %}
+        <div class="playground">
+            <img src="{{ playground.photo }}" alt="">
+            
+            <div class="text">
+                <p><strong>Address: </strong>{{ playground.address }}</p>
+                <p><strong>Description: </strong>{{ playground.description }}</p>
+                <a href="/">click</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

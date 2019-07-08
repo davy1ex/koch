@@ -1,0 +1,20 @@
+.cell_playgrounds {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.playground {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.playground img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text {
+    padding-top: 10px;
+}

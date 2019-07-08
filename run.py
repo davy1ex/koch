@@ -3,7 +3,7 @@ from flask_login import current_user, login_user
 
 from app import app
 from forms import LoginForm
-from models import User
+from models import User, Playground
 
 
 @app.route("/")
@@ -19,10 +19,17 @@ def login():
         user = User.query.filter_by(login=form.login.data, password=form.password.data).first()
         if user is not None:
             print("hello, ", form.login.data)
-            login_user(user)
+            login_user(user, remember=True)
             return redirect(url_for("index"))
     
     return render_template("login.html", form=form)
+
+
+@app.route("/b")
+def basketball():
+    playgrounds = Playground.query.filter_by(playground_type="b").all()
+    
+    return render_template("basketball.html", playgrounds=playgrounds)
 
 
 if __name__ == "__main__":

@@ -13,3 +13,11 @@ class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     login = db.Column(db.String(64), unique=True)
     password = db.Column(db.String(128))
+
+
+class Playground(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    photo = db.Column(db.String(128))
+    address = db.Column(db.String(128))
+    playground_type = db.Column(db.String(32))
+    description = db.Column(db.String(512))
