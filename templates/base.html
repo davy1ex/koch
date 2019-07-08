@@ -18,7 +18,7 @@
                     {% if current_user.login == "root" %}
                         <li><a href="/admin">Admin panel</a></li>
                     {% endif %}
-                    <li><a href="/b">Basketball</a></li>
+                    <li><a href="{{ url_for("basketball", page=0) }}">Basketball</a></li>
                     <li><a href="/b">Workout</a></li>
                     <li><a href="/b">Soccer</a></li>
                 </ul>

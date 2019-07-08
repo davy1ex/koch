@@ -19,6 +19,21 @@
     {% endfor %}
 </div>
 <div class="pages">
+    {% if page != 0 %}
+        <li>
+            {% if page == 0 %}
+                <span class="this_page">
+                    <a href="{{ url_for("basketball", page=0) }}">0</a>
+                </span>
+            {% else %}
+                <a href="{{ url_for("basketball", page=0) }}">0</a>
+            {% endif %}
+        </li>
+
+        {% if page > 1 %}
+            <li> <a href="">...</a> </li>
+        {% endif %}
+    {% endif %}
     {% if playgrounds | length >= 9 %}
         {% for n_page in range(9) %}
             {% if page == n_page + page  %}
