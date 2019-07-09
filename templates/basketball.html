@@ -6,11 +6,13 @@
 
 {% block content %}
 <div class="cell_playgrounds">
+    <a href="{{ url_for("sort_by_rating") }}">sort by rating</a>
     {% for playground in playgrounds %}
         <div class="playground">
             <img src="{{ playground.photo }}" alt="">
             
             <div class="text">
+                <p><strong>Rating</strong>{{ playground.rating }}</p>
                 <p><strong>Address: </strong>{{ playground.address }}</p>
                 <p><strong>Description: </strong>{{ playground.description }}</p>
                 <a href="/">click</a>

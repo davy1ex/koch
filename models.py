@@ -18,6 +18,7 @@ class User(db.Model, UserMixin):
 class Playground(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     photo = db.Column(db.String(128))
-    address = db.Column(db.String(128))
     playground_type = db.Column(db.String(32))
+    address = db.Column(db.String(128))
+    rating = db.Column(db.Integer)
     description = db.Column(db.String(512))

@@ -1,3 +1,4 @@
+from operator import attrgetter, itemgetter
 from flask import render_template, redirect, url_for
 from flask_login import current_user, login_user
 
@@ -29,8 +30,14 @@ def login():
 def basketball(page):
     page = int(page)    
     playgrounds = Playground.query.filter_by(playground_type="b").all()[page*9:page*9+9]
+    playgrounds = sorted(playgrounds, key=attrgetter("rating"))[::-1]
     
     return render_template("basketball.html", playgrounds=playgrounds, page=int(page))
+
+
+@app.route("/sort_by_rating")
+def sort_by_rating():
+    return "this deleloping..."
 
 
 if __name__ == "__main__":

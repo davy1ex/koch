@@ -5,5 +5,5 @@ from wtforms.validators import InputRequired
 
 class LoginForm(FlaskForm):
     login = StringField("Login", validators=[InputRequired()])
-    password = StringField("Password", validators=[InputRequired()])
+    password = PasswordField("Password", validators=[InputRequired()])
     submit = SubmitField("ok", validators=[InputRequired()])
