@@ -40,5 +40,12 @@ def sort_by_rating():
     return "this deleloping..."
 
 
+@app.route("/b/playground_<id>")
+def playground(id):
+    playgournd = Playground.query.filter_by(id=id).first()
+
+    return render_template("playground.html", playground=playground)
+
+
 if __name__ == "__main__":
     app.run()
