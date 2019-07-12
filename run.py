@@ -42,7 +42,7 @@ def sort_by_rating():
 
 @app.route("/b/playground_<id>")
 def playground(id):
-    playgournd = Playground.query.filter_by(id=id).first()
+    playground = Playground.query.filter_by(id=id).first()
 
     return render_template("playground.html", playground=playground)
 
