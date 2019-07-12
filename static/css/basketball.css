@@ -10,7 +10,7 @@
 
 .cell_playgrounds {
     display: flex;
-    margin: 20px 0;
+    /* margin: 10px 0; */
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;

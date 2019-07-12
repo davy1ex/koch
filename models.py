@@ -22,3 +22,7 @@ class Playground(db.Model):
     address = db.Column(db.String(128))
     rating = db.Column(db.Integer)
     description = db.Column(db.String(512))
+    # Забор
+    # Покрытие
+    # Тень
+    # Общее состояние

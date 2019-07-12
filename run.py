@@ -35,9 +35,10 @@ def basketball(page):
     return render_template("basketball.html", playgrounds=playgrounds, page=int(page))
 
 
-@app.route("/sort_by_rating")
-def sort_by_rating():
-    return "this deleloping..."
+# нахуй это вообще надо? Буду сразу сортировать по популярности
+# @app.route("/sort_by_rating")
+# def sort_by_rating():
+#     return "this deleloping..."
 
 
 @app.route("/b/playground_<id>")
