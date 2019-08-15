@@ -30,9 +30,10 @@ def login():
 def basketball(page):
     page = int(page)    
     playgrounds = Playground.query.filter_by(playground_type="b").all()[page*9:page*9+9]
+    basketball_marks = playgrounds = Playground.query.all() # для отметок на карте
     playgrounds = sorted(playgrounds, key=attrgetter("rating"))[::-1]
     
-    return render_template("basketball.html", playgrounds=playgrounds, page=int(page))
+    return render_template("basketball.html", playgrounds=playgrounds, page=int(page), marks=basketball_marks)
 
 
 # нахуй это вообще надо? Буду сразу сортировать по популярности

@@ -22,7 +22,12 @@ class Playground(db.Model):
     address = db.Column(db.String(128))
     rating = db.Column(db.Integer)
     description = db.Column(db.String(512))
+    latitude = db.Column(db.Float, unique=True) # ширина
+    longitude = db.Column(db.Float, unique=True) # долгота
     # Забор
     # Покрытие
     # Тень
     # Общее состояние
+
+    def __repr__(self):
+        return "{}".format(self.description)    
