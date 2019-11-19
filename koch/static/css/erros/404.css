@@ -1,0 +1,12 @@
+.wrapper {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.image img{
+    height: 400px;
+}
+
+.text {
+    margin-top: 20px;
+}

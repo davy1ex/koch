@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css/erros/404.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+    <div class="image">
+        <img src="{% static 'img/sorru.png' %}" alt="not found">
+    </div>
+
+    <div class="text">
+        Error 404. We are developing.
+    </div>    
+</div>
+{% endblock %}
