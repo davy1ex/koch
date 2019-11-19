@@ -1,9 +1,11 @@
 from operator import attrgetter, itemgetter
 from flask import render_template, redirect, url_for
+
 from flask_login import current_user, login_user
+from sqlalchemy.exc import OperationalError
 
 from app import app
-from forms import LoginForm
+from forms import LoginForm, SearchPlayground
 from models import User, Playground
 
 
@@ -29,11 +31,16 @@ def login():
 @app.route("/b_<page>")
 def basketball(page):
     page = int(page)    
-    playgrounds = Playground.query.filter_by(playground_type="b").all()[page*9:page*9+9]
-    basketball_marks = playgrounds = Playground.query.all() # для отметок на карте
-    playgrounds = sorted(playgrounds, key=attrgetter("rating"))[::-1]
+    form = SearchPlayground()
+    try:
+        playgrounds = Playground.query.filter_by(playground_type="b").all()[page*9:page*9+9]
+        basketball_marks = playgrounds = Playground.query.all() # для отметок на карте
+        playgrounds = sorted(playgrounds, key=attrgetter("rating"))[::-1]
+        
+        return render_template("basketball.html", playgrounds=playgrounds, page=int(page), marks=basketball_marks, form=form)
     
-    return render_template("basketball.html", playgrounds=playgrounds, page=int(page), marks=basketball_marks)
+    except OperationalError:
+        return render_template("index.html")
 
 
 # нахуй это вообще надо? Буду сразу сортировать по популярности

@@ -7,3 +7,8 @@ class LoginForm(FlaskForm):
     login = StringField("Login", validators=[InputRequired()])
     password = PasswordField("Password", validators=[InputRequired()])
     submit = SubmitField("ok", validators=[InputRequired()])
+
+
+class SearchPlayground(FlaskForm):
+    text_line = StringField("Street", validators=[InputRequired()])
+    submit = SubmitField("search")

@@ -1,5 +1,9 @@
+nav {
+    padding: 10px 0;
+}
+
 .map {
-    margin: 10px 0;
+    /* margin: 10px 0; */
     height: 300px;
 }
 
