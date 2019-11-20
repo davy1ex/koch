@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+<link rel="stylesheet" href="static 'css/main/playgound.css'">
+{% endblock %}
+
+{% block body %}
+{% load static %}
+{% for p in list_playground %}
+<img src="{{ p.photo.url }}" alt="">
+{{ p.address }}
+{{ p.description }}
+{% endfor %}
+{% endblock %}

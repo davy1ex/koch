@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* background: #20292d; */
+}
+
+button {
+    border: none
+}
+
+body {
+    background: #2D3A40;    
+}
+
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
+
+* {
+    color: white;
+}
+
+.wrapper {
+    line-height: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 50px;
+}
+
+.wrapper div {
+    margin: auto;
+}
+
+header .wrapper {
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+
+    background: #3E555B;
+    border-radius: 40px;
+}
+
+header ul {
+    width: 100%;
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+}
+
+header li {
+    text-align: center;
+    display: block;
+    width: auto;
+}   
+
+header li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.usermenu {
+    margin-left: 10% !important;
+}
+
+.usermenu ul {
+    display: inline-flex;
+}
+
+.usermenu ul li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.vk-logo {
+    width: 30px;
+}
+
+.vk-logo a {
+    line-height: 35px;
+}
+
+.vk-logo img {
+    width: 30px;
+    padding: auto;
+}
+
+.body_wrapper {
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
