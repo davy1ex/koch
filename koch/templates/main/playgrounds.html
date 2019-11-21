@@ -2,14 +2,32 @@
 
 
 {% block head %}
-<link rel="stylesheet" href="static 'css/main/playgound.css'">
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main/playgrounds.css' %}">
 {% endblock %}
 
 {% block body %}
-{% load static %}
-{% for p in list_playground %}
-<img src="{{ p.photo.url }}" alt="">
-{{ p.address }}
-{{ p.description }}
-{% endfor %}
+
+    <div class="items_cell">
+        {% for p in list_playground %}
+            <div class="item">
+                <div class="photo">
+                    <img src="{{ p.photo.url }}" alt="">
+                </div>
+                <div class="item_info">
+                    <div class="text">
+                        <div class="address">
+                                {{ p.address }}
+                        </div>
+
+                        <div class="description">
+                            {{ p.description }}
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

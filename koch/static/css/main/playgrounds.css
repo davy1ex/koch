@@ -1,0 +1,113 @@
+.items_cell {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    /* display: inline-block; */
+    /* flex-direction: column; */
+    width: 30%;   
+    margin: 5px;
+    /* border: 1px solid black; */
+}
+
+.item .photo {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.item .photo img {    
+    /* width: initial; */
+    width: 100%;
+    height: 170px;
+}
+
+.item_info {
+    /* height: 100px; */
+    background: #3E555B
+}
+
+.item_info > .text {
+    padding: 20px 10px;
+}
+
+.text .title {
+    font-size: 1.3em;
+}
+
+.text .description {
+    color: #B9CDD6;
+    padding-top: 5px;
+    font-size: 0.9em;
+}
+
+/* .item .buy_container {
+    width: 90%;
+    margin: 0 auto;
+    background: transparent;
+
+}
+
+.item .buy_field {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    border-radius: 100px;
+
+    background: #4CC695;
+
+    text-align: center;
+    
+    margin-left: auto;
+    margin-top: -20px;
+    
+} 
+
+.item a, .item a:visited {
+    text-decoration: none;
+}
+
+.item .price-container {
+    width: 250px;
+    
+    background: transparent;
+    margin-left: -20px;
+    padding-top: 50px;
+    padding-bottom: 10px;
+}
+
+.item .price  {
+    width: auto;
+    height: 30px;
+    display: inline-flex;
+    line-height: 35px; 
+    border-radius: 100px; 
+    padding-right: 10px;
+    background: white;
+    
+    line-height: 20px; 
+}
+
+.price .currency, .price .currency img {
+    width: 30px;
+}
+
+.price .text {
+    padding-left: 5px;
+    height: 30px;
+    line-height: 30px;
+
+    font-size: 0.7em;
+    text-align: center;
+    
+    color: #3E555B;
+}
+
+
+
+.item .buy_field img {
+    width: 20px;
+} */
