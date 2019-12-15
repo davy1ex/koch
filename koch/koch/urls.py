@@ -16,6 +16,6 @@ handler500 = 'main.views.handler500'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main/', views.index),
-    path('main/b', PlaygroundView.as_view())
+    path('', views.index),
+    path('b', PlaygroundView.as_view())
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
