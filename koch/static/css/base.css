@@ -9,21 +9,17 @@ button {
 }
 
 body {
-    background: #2D3A40;    
+    background: #2D3A40;
+    color: black;
 }
 
-
-a, a:visited {
+header a, header a:visited {
     color: white;
     text-decoration: none;
 }
 
 a:hover {
     color: gray;
-}
-
-* {
-    color: white;
 }
 
 .wrapper {

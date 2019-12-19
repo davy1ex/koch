@@ -25,6 +25,7 @@ def index(request):
 class PlaygroundView(generic.ListView):
     template_name = 'main/playgrounds.html'
     context_object_name = 'list_playground'
+    
 
     def get_queryset(self):
         return Playground.objects.all()
