@@ -17,5 +17,5 @@ handler500 = 'playgrounds.views.handler500'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', playgrounds.views.index),
-    path('b', PlaygroundView.as_view())
+    path('b', playgrounds.views.basketball),#PlaygroundView.as_view())
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

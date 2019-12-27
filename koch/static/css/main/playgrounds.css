@@ -8,6 +8,16 @@
 }
 
 
+.buttons {
+    /* width: 30%; */
+    display: inline-block;
+    border-radius: 40px;
+
+    padding: 0 10px;
+    background: #3E555B;
+    align-items: center;
+}
+
 
 .add {
     margin: 10px auto;
@@ -16,7 +26,7 @@
     width: 35px;
     height: 35px;
     line-height: 35px;
-    text-align: center;
+    color: white;
 }
 
 a .add, a:visited .add{
@@ -76,76 +86,10 @@ a .add, a:visited .add{
     font-size: 0.9em;
 }
 
-/* .item .buy_container {
-    width: 90%;
-    margin: 0 auto;
-    background: transparent;
-
-}
-
-.item .buy_field {
-    width: 40px;
-    height: 40px;
-    line-height: 45px;
-    border-radius: 100px;
-
-    background: #4CC695;
-
-    text-align: center;
-    
-    margin-left: auto;
-    margin-top: -20px;
-    
-} 
-
-.item a, .item a:visited {
-    text-decoration: none;
-}
-
-.item .price-container {
-    width: 250px;
-    
-    background: transparent;
-    margin-left: -20px;
-    padding-top: 50px;
-    padding-bottom: 10px;
-}
-
-.item .price  {
-    width: auto;
-    height: 30px;
-    display: inline-flex;
-    line-height: 35px; 
-    border-radius: 100px; 
-    padding-right: 10px;
-    background: white;
-    
-    line-height: 20px; 
-}
-
-.price .currency, .price .currency img {
-    width: 30px;
-}
-
-.price .text {
-    padding-left: 5px;
-    height: 30px;
-    line-height: 30px;
-
-    font-size: 0.7em;
-    text-align: center;
-    
-    color: #3E555B;
-}
 
 
-
-.item .buy_field img {
-    width: 20px;
-} */
-
-
-.modal-mask {
+/* modal */
+/* .modal-mask {
     position: fixed;
     z-index: 9998;
     top: 0;
@@ -153,6 +97,7 @@ a .add, a:visited .add{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .5);
+    
     display: table;
     transition: opacity .3s ease;
   }
@@ -171,11 +116,14 @@ a .add, a:visited .add{
     box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
     transition: all .3s ease;
     font-family: Helvetica, Arial, sans-serif;
+
+    background-color: #2D3A40;
+    color: white;
   }
   
   .modal-header h3 {
     margin-top: 0;
-    color: #42b983;
+    color: white;
   }
   
   .modal-body {
@@ -184,7 +132,7 @@ a .add, a:visited .add{
   
   .modal-default-button {
     float: right;
-  }
+  } */
   
   /*
    * The following styles are auto-applied to elements with
@@ -195,7 +143,7 @@ a .add, a:visited .add{
    * these styles.
    */
   
-  .modal-enter {
+  /* .modal-enter {
     opacity: 0;
   }
   
@@ -207,4 +155,46 @@ a .add, a:visited .add{
   .modal-leave-active .modal-container {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+  } */
+  /* endmodal */
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    
+    background: #2D3A40;
+    color: white;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
