@@ -8,7 +8,13 @@ class PlaygroundForm(forms.ModelForm):
         fields = (
             'latitude',
             'longitude',
+            'address',
             'playground_type',
             'description',
-            'photo',            
+            'rating',
+            'photo',
         )
+    
+    def __init__(self, *args, **kwargs):
+        super(PlaygroundForm, self).__init__(*args, **kwargs)
+        self.fields['photo'].required = False

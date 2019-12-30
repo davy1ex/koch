@@ -76,12 +76,19 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-        <div id="choices" class="choices">
+        <p>Add playground</p>
+        
             
-        </div>
-        <input class="input" id="input_street" type="text"> <button onclick="search()" id="search">ok</button>
-        {{ form.as_p }}
+        <p><input class="input_street" id="input_street" type="text"> <button onclick="search()" class="btn_ok" id="search">ok</button></p>
+        <div id="choices" class="choices"></div>
+        
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save">Save</button>
+        </form>
+        
+        
         <script>
             function search() {
                 url = 'https://geocode-maps.yandex.ru/1.x/?apikey=4c23ed62-3c8e-42df-ada2-27ae00eba906&format=json&geocode=' + document.getElementById('input_street').value.replace(/ /g,'');
@@ -91,6 +98,7 @@
                     coordinate = JSON.parse(text)["response"]["GeoObjectCollection"]["featureMember"][0]["GeoObject"]["Point"]["pos"].split(' ')
                     console.log(coordinate)
                     document.getElementById('id_latitude').value = coordinate[0]
+                    document.getElementById('id_address').value = JSON.parse(text)["response"]["GeoObjectCollection"]["metaDataProperty"]["GeocoderResponseMetaData"]["suggest"]
                     document.getElementById('id_longitude').value = coordinate[1]
                     // ["response"]["GeoObjectCollection"]["featureMember"][0]["GeoObject"]["Point"]["pos"].split( ); // coordinates
                 });

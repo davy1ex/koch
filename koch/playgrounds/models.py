@@ -8,4 +8,4 @@ class Playground(models.Model):
     description = models.CharField(max_length=512)
     latitude = models.FloatField(unique=True)
     longitude = models.FloatField(unique=True)
-    photo = models.ImageField(upload_to="playground")
+    photo = models.ImageField(verbose_name='Photo', upload_to="playground", null=True, blank=True)

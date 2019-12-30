@@ -1,4 +1,4 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render, render_to_response, redirect
 from django.template import RequestContext
 from django.conf import settings
 
@@ -35,5 +35,23 @@ class PlaygroundView(generic.ListView):
 def basketball(request):
     p = Playground.objects.filter(playground_type='b')
     form = PlaygroundForm()
+    
+    if request.method == "POST":
+        form = PlaygroundForm(request.POST, request.FILES)
+        print(form)
+        if form.is_valid():
+            # print(form.cleaned_data)
+            playground = form.save(commit=False)
+            # playground_type = request.id_playground_type
+            
+            # rating = request.rating
+            # description = request.id_description
+            # latitude = request.id_latitude
+            # longitude = request.id_longitude
+            # photo = request.id_photo
+            playground.save()
+        
+            return redirect('/')
+
     return render(request, 'main/playgrounds.html', {'list_playground':p, 'form':form})
         
