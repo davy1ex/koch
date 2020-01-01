@@ -61,6 +61,7 @@ header li:not(:last-child) {
 
 .usermenu {
     margin-left: 10% !important;
+    color: white;
 }
 
 .usermenu ul {
@@ -71,15 +72,15 @@ header li:not(:last-child) {
     margin-right: 20px;
 }
 
-.vk-logo {
+.vk_logo {
     width: 30px;
 }
 
-.vk-logo a {
+.vk_logo a {
     line-height: 35px;
 }
 
-.vk-logo img {
+.vk_logo img {
     width: 30px;
     padding: auto;
 }

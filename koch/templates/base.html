@@ -31,10 +31,17 @@
                 </ul>
             </div>
             
-            <!-- тут будет менюшка пользователя (не скоро)
+            <!-- тут будет менюшка пользователя (не скоро) -->
             <div class="usermenu">
-                
-            </div> -->               
+                {% if not user.is_authenticated %}
+                    <div class="vk_logo">
+                        <a href="/login/vk-oauth2"><img src="{% static 'img/vk_logo.png'%}" class="vk"></a>
+                    </div>
+                {% else %}
+                    {{ user.username }}
+                    <a href="{% url 'logout' %}">logout</a>
+                {% endif %}
+            </div>               
         </div>
     </header>
     <div class="body_wrapper">

@@ -2,6 +2,9 @@ from django.shortcuts import render, render_to_response, redirect
 from django.template import RequestContext
 from django.conf import settings
 
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout
+
 from django.views.generic import TemplateView
 from django.views import generic
 
@@ -17,6 +20,12 @@ def handler404(request, exception):
 def handler500(request):
     data = {"name": "ThePythonDjango.com"}
     return render(request,'errors/404.html')
+
+
+@login_required
+def logout_view(request):
+    logout(request)
+    return redirect(index)
 
 
 def index(request):
